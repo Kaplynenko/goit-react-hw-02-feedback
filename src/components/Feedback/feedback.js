@@ -1,19 +1,17 @@
-import React from 'react';
+// import Statistics from 'components/Statistics/statistics';
 
-class Feedback extends React.Component {
-  handleLeaveFeedback = () => {
-    console.log('lox');
-  };
-  render() {
-    return (
-      <div>
-        <button type="button" onClick={this.handleLeaveFeedback}>
-          Good
-        </button>
-        <button type="button">Neutral</button>
-        <button type="button">Bad</button>
-      </div>
-    );
-  }
-}
+const Feedback = ({ options, onHandleIncrement }) => {
+  return (
+    <>
+      {options.map(option => {
+        return (
+          <button key={option} onClick={() => onHandleIncrement(option)}>
+            {option}
+          </button>
+        );
+      })}
+    </>
+  );
+};
+
 export default Feedback;
