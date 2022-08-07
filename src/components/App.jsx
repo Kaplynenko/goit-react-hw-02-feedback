@@ -6,6 +6,7 @@ import Feedback from './Feedback';
 import Statistics from './Statistics';
 
 class App extends Component {
+  
   state = {
     good: 0,
     neutral: 0,
